@@ -8,7 +8,7 @@ from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 import pathlib
 
 # Fix for Windows path issues
-pathlib.PosixPath = pathlib.WindowsPath
+
 
 # Confidence thresholds
 LEAF_CONF_THRESH = 0.6

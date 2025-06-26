@@ -1,2 +1,0 @@
-# detection_app
-

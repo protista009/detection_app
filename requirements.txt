@@ -1,7 +1,10 @@
+# Minimal requirements.txt
 streamlit
 torch
 torchvision
-Pillow
-opencv-python
-pyyaml
-matplotlib
+opencv-python-headless
+tensorflow
+ultralytics
+numpy
+pandas
+pillow

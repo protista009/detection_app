@@ -1,9 +1,8 @@
 import streamlit as st
-from PIL import Image
+from PIL import Image  
 import pathlib
 import torch
 import torchvision.transforms as transforms
-
 
 pathlib.PosixPath = pathlib.WindowsPath
 # Set UI layout
@@ -30,10 +29,13 @@ class_names = [
 # Load YOLOv5 classification model
 @st.cache_resource
 def load_model():
-    
-    model = torch.hub.load('yolov5', 'custom', path='best.pt', source='local')
-    model.eval()
+    model_path = "best.pt"
+    model_data = torch.load(model_path, map_location=torch.device("cpu"), weights_only=False)
 
+    if isinstance(model_data, dict) and 'model' in model_data:
+        model = model_data['model'].float().fuse().eval()
+    else:
+        model = model_data.eval()
     
     return model
 

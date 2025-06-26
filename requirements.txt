@@ -1,6 +1,6 @@
 
 # Core Streamlit and Web Framework
-python-3.10.12
+
 streamlit>=1.33.0
 
 # Deep Learning - PyTorch ecosystem

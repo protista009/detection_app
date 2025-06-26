@@ -1,24 +1,10 @@
-# Core Requirements
-streamlit==1.32.0
-pillow==10.1.0
-
-# For GPU Support (CUDA 11.8)
---extra-index-url https://download.pytorch.org/whl/cu118
-torch==2.2.1
-torchvision==0.17.1
-torchaudio==2.2.1  # Optional for audio processing
-
-git+https://github.com/ultralytics/yolov5.git@v6.0
-# YOLOv5 Specific
-gitpython==3.1.40
-opencv-python-headless==4.9.0.80
-numpy==1.26.4
-pandas==2.2.1
-tqdm==4.66.2
-seaborn==0.13.2
-pyyaml==6.0.1
-requests==2.31.0
-
-# Additional Dependencies
-pathlib==1.0.1  # Only needed for Windows path compatibility
-protobuf==3.20.3  # Required for ONNX/TensorRT export compatibility
+# Minimal requirements.txt
+streamlit
+torch
+torchvision
+opencv-python-headless
+tensorflow<=2.13.0
+ultralytics
+numpy
+pandas
+pillow
